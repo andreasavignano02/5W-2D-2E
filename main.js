@@ -4,7 +4,8 @@ document.getElementById('budgetiniziale').innerHTML = 'Punto di partenza:'+ budg
 let dispositiviElettronici = [300, 150, 200, 100]
 
 for (let i = 0; i < dispositiviElettronici.length; i++) {
-    document.getElementById('contenitore').innerHTML +=  `<button onclick="sottrazione(${dispositiviElettronici[i]})">elemento $${dispositiviElettronici[i]}</button>`
+    document.getElementById('contenitore').innerHTML +=  `<button onclick="sottrazione(${dispositiviElettronici[i]})">telefono $${dispositiviElettronici[i]}</button>`
+    
 }
 
 function sottrazione(prezzo) {
@@ -17,6 +18,6 @@ function sottrazione(prezzo) {
         prompt("Ti consiglio di non acquistare nulla")
     }
     if (budget <= 0) {
-        prompt("Non puoi acquistare più nulla ti abbiamo fatto lo sconto di già")
+        return prompt("Non puoi acquistare più nulla ti abbiamo fatto lo sconto di già")
     }
 }
